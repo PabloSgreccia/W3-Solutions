@@ -1,0 +1,31 @@
+<h1 class="header">Países</h1>
+
+<br>
+<div class="container">
+
+    <label class="search-label" for="searchInput">Buscar País: </label>
+    <div class="search-box">
+        <input type="input" id="searchInput" class="search-input" placeholder="China..." #searchValue maxlength="25"/>
+        <button class="common-btn" (click)="filter()">Buscar</button>    
+    </div>
+
+    <div *ngIf="error" class="error">{{error}}</div >       
+        
+    <table *ngIf="countries.length">
+        <thead>
+            <th>País</th>
+            <th>Población</th>
+            <th>% Habitantes</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let country of countries">
+                <td>{{country.name}}</td>
+                <td>{{country.population}}</td>
+                <td>{{country.avg_population | number:'1.1-2'}}%</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p class="no-result" [hidden]="!emptyResult"><b>No se encontraron resultados :(</b></p>
+        
+</div>

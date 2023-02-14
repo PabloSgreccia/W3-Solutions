@@ -1,0 +1,123 @@
+/* header */
+.header{
+    background-color: var(--main-color);
+    overflow: hidden;
+    width: 100%;
+    color: white;
+    padding: 15px 0px 15px 0px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.container{
+    width: 100%;
+    padding-right: 10%;
+    padding-left: 10%;
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        padding-right: 1em;
+        padding-left: 1em;
+    }
+  }
+  
+/* Search group */
+.search-box{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.search-label{
+    font-size: 1.3rem
+}
+
+.search-input {
+  font-family: inherit;
+  width: 100%;
+  border: 0px;
+  border-bottom: 2px solid var(--main-color);
+  outline: 0;
+  font-size: 1.3rem;
+  color: rgb(77, 77, 77);
+  padding: 7px 0;
+  background: transparent;
+}
+
+@media screen and (max-width: 600px) {
+    .search-box{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+  }
+
+/* button */
+.common-btn {
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+    border-radius: 0.75rem;
+    background-color: var(--main-color);
+    border: 1px solid var(--main-border-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+    gap: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    min-width: 80px;
+}
+.common-btn:hover{
+    background-color: var(--main-hover-color);
+    border-color: var(--main-hover-color);
+}
+
+.common-btn:active{
+    opacity: 50%;
+}
+
+
+/* Table */
+table{
+    margin-top: 20px;
+    text-align: center;
+    font-size: 1.15rem;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+thead{
+    border-top: 1px solid #172029;
+    border-bottom: 1px solid #172029;
+    padding-top: 10px;
+    line-height: 3rem;
+    background-color: rgb(206, 206, 206);
+}
+
+tbody tr{
+    padding-top: 10px;
+    line-height: 3rem;
+    background-color: #f0f0f0;
+    border-bottom: 1px solid #e7e7e7;
+}
+
+tbody tr:hover{
+    background-color: rgb(224, 224, 224);
+    transition: 0.3s;
+}
+
+/* Messages */
+.error{
+    margin-top: 5px;
+    color: red;
+}
+
+.no-result{
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+}
